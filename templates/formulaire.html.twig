@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>Formulaire d'inscription</h2>
+
+<form action="" method="post">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required><br><br>
+    
+    <label for="prenom">Prénom :</label>
+    <input type="text" id="prenom" name="prenom" required><br><br>
+    
+    <label for="date_naissance">Date de naissance :</label>
+    <input type="date" id="date_naissance" name="date_naissance" required><br><br>
+    
+    <label for="niveau_scolaire">Niveau scolaire :</label>
+    <select id="niveau_scolaire" name="niveau_scolaire" required>
+        <option value="primaire">Primaire</option>
+        <option value="collège">Collège</option>
+        <option value="lycée">Lycée</option>
+        <option value="université">Université</option>
+    </select><br><br>
+    
+    <label for="module_souhaite">Module souhaité :</label>
+    <input type="module" id="module_souhaite" name="module_souhaite" required><br><br>
+    
+    <label for="motif_souhaite">Motif souhaité :</label><br>
+    <textarea id="motif_souhaite" name="motif_souhaite" rows="4" cols="50" required></textarea><br><br>
+    
+    <input type="submit" value="Soumettre">
+    
+</form>
+
+</body>
+</html>

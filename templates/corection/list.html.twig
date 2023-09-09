@@ -1,0 +1,55 @@
+{% extends "corection/base.html.twig" %}
+
+{% block title %} tableau {% endblock %}
+
+{% block contenu %}
+
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Date de naissance</th>
+            <th scope="col">Niveau scolaire</th>
+            <th scope="col">module souhaité</th>
+            <th scope="col">motif d'inscrption</th>
+          </tr>
+        </thead>
+        <tbody>
+          {# <tr>
+            <td >{{'1'}}</td>
+            <td >{{datas['nom'] ?? ""}}</td>
+            <td>{{datas['prenom'] ?? ""}}</td>
+            <td>{{datas['dateNaissance'] ?? ""}}</td>
+            <td>{{datas['niveauScolaire'] ?? ""}}</td>
+            <td>{{datas['moduleSouhaite']?? ""}}</td>
+            <td>{{datas['motifInscription'] ?? ""}}</td>
+          </tr> #}
+          {% for item in data %}
+            <tr>
+            {# <td >{{'1'}}</td> #}
+            <td >{{item.id}}</td>
+            <td>{{item.nom}}</td>
+            <td>{{item.prenom}}</td>
+            <td>{{item.dateNaissance|date('d-m-Y')}}</td>
+            <td>{{item.niveauScolaire}}</td>
+            <td>{{item.moduleSouhaite}}</td> 
+             <td>{{item.motifInscription}}</td>
+            <td>{{item.dateCreated|date('d-m-Y')}}</td>
+            
+          </tr>
+          {# <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>02/10/1444</td>
+            <td>6eme</td>
+            <td>SQL</td>
+            <td>plus apprendre</td>
+          </tr>  #}
+          {% endfor %}
+
+        </tbody>
+      </table>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "corection/base.html.twig" %}
+
+{% block title %} formulaire {% endblock %}
+
+{% block contenu %} 
+<div class="container">
+
+<form action="{{path('save_form')}}" method="post">
+<br><br><br>
+  <div class="row">
+
+   <div class="col">
+     <label for="nom">Nom :</label>
+     <input type="text" class="form-control" placeholder="Nom" aria-label="First name" name="nom" required>
+  </div>
+
+  <div class="col">
+     <label for="prenom">Prénom :</label>
+     <input type="text" class="form-control" placeholder="Prenom" aria-label="Last name" name="prenom" required>
+  </div>
+
+  <div class="col">
+     <label for="date_naissance">Date de naissance :</label>
+     <input type="date" class="form-control" id="dateNaissance" name="dateNaissance" required><br><br>
+  </div>
+
+  <div class="col">
+     <label for="NiveauScolaire" class="form-label"> Niveau Scolaire</label>
+     <select id="NiveauScolaire" class="form-select" name="niveauScolaire" required>
+       <option selected>Niveau scolaire</option>
+       <option value="primaire">Primaire</option>
+       <option value="college">Collège</option>
+       <option value="lycee">Lycèe</option>
+       <option value="universite">Université</option>
+     </select>     
+  </div>
+
+  <div class="col">
+     <label for="ModuleSouhaite" class="form-label">Module Souhaité</label>
+     <select id="ModuleSouhaite" class="form-select" name="moduleSouhaite" required>
+       <option selected>choisir un module</option>
+       <option value="symfony">Symfony</option>
+       <option value="js">js</option>
+       <option value="css">css</option>
+       <option value="java">java</option>
+     </select>     
+  </div>
+
+  <div>
+     <label for="motif_souhaite">Motif d'inscription :</label><br>
+     <textarea id="motif_souhaite" name="motifInscription" rows="4" cols="50" required></textarea><br><br>
+  </div>
+
+  <div>
+     <input type="submit" value="Soumettre">
+  </div>
+  
+  </div>
+</div>  
+</form>
+{% endblock %}
